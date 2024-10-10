@@ -1,0 +1,101 @@
+<div class="shipping-badges">
+  <div class="shipping-badge">
+    <img src="{{ 'icon-1.svg' | asset_url }}" alt="Some Other Info">
+    <p>30-day Money-back Guarantee</p>
+  </div>
+  <div class="shipping-badge">
+    <img src="{{ 'icon-2.svg' | asset_url }}" alt="Free Shipping">
+    <p>Free Shipping within USA</p>
+  </div>
+  <div class="shipping-badge">
+    <img src="{{ 'icon-3.svg' | asset_url }}" alt="Signal Catalogue Updates Included">
+    <p>Signal Catalogue Updates Included</p>
+  </div>
+  <div class="shipping-badge">
+    <img src="{{ 'icon-4.svg' | asset_url }}" alt="Customer Support">
+    <p>Customer Support via E-mail, Phone, and Chat</p>
+  </div>
+</div>
+
+<style>
+    @media screen and (min-width: 750px) {
+    .shipping-badges-mob{
+      display:none !important;
+    }
+        .product__column-sticky{
+      position:relative !important;
+    }
+
+  }
+
+    @media screen and (max-width: 749px) {
+
+    .shipping-badges-web{
+      display:none;
+    }
+
+  }
+
+
+
+    .shipping-badges {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two columns for shipping badges */
+      gap: 25px; /* Adjust spacing as needed */
+      margin-left: 20px; /* Center the shipping badges section */
+      margin-right:20px;
+      margin-top:50px;
+      margin-bottom:80px;
+
+    }
+
+    .shipping-badge {
+      display: flex;
+      align-items: center;
+      width: 100%; /* Ensure shipping badge takes the full width of its grid cell */
+    }
+
+    .shipping-badge img {
+      margin-right: 8px; /* Adjust spacing between icon and text */
+    }
+
+    /* Shipping badge text styles */
+    .shipping-badge p {
+      font-family: Poppins;
+      font-weight: 300;
+      margin: 0;
+    }
+
+    /* Styles for web */
+    @media (min-width: 768px) {
+      .shipping-badge p {
+        font-size: 18px;
+        line-height: 30px;
+        text-align: left;
+      }
+    }
+
+    /* Styles for mobile */
+    @media (max-width: 767px) {
+      .shipping-badges {
+      grid-template-columns: repeat(2, 1fr);
+      margin-left: 5px;
+      margin-right:5px;
+      margin-top:10px;
+      margin-bottom:80px;
+      }
+
+      .shipping-badge{
+        flex-direction: column;
+        gap:15px
+
+      }
+
+
+      .shipping-badge p {
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center; 
+      }
+    }
+</style>

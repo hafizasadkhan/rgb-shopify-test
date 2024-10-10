@@ -1,0 +1,31 @@
+<div class="custom-standard-badges">
+    <img src="{{ 'icnirp-logo.png' | asset_url }}" alt="Image 1">
+    <img src="{{ 'fc-logo.png' | asset_url }}" alt="Image 2">
+</div>
+
+<style>
+.custom-standard-badges {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  gap:20px;
+}
+
+.custom-standard-badges img {
+    width: 112px;
+    height: 112px;
+}
+
+@media (max-width: 768px) {
+    .custom-standard-badges img {
+        width: 74px;
+        height: 74px;
+    }
+  .custom-standard-badges{
+    margin-left:10px;
+      gap:15px;
+    margin-bottom:10px;
+
+  }
+}
+</style>
